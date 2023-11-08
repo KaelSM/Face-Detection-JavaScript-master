@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face Detection App</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    canvas {
+      position: absolute;
+    }
+    #video {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<div style="position: relative;">
+  <video id="video" width="720" height="560" autoplay muted></video>
+  <canvas id="overlay" style="position: absolute; top: 0; left: 0;"></canvas>
+</div>
+<button id="viewGallery">View Gallery</button>
+
+  <script>
+    document.getElementById('viewGallery').addEventListener('click', () => {
+      window.location.href = 'gallery.html';
+    });
+  </script>
+</body>
+</html>
